@@ -1,0 +1,74 @@
+.tela-mapa {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+}
+
+.borracharia {
+    background-color: white;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.322);
+}
+
+.status {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius : 12px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.status-aberto {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status-fechado{
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.aviso-convidado {
+    background-color: #fff3cd;
+    color: #856404;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+
+.botao-ligar {
+    display: inline-block;
+    margin-top: 8px;
+    margin-top: 8px;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.borracharia h2 {
+    color: #333;
+    margin: 0 0 8px 0;
+}
+
+.tela-mapa h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.campo-busca {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
