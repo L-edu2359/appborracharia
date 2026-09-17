@@ -6,21 +6,21 @@ const borracharias = [
     id: 1,
     nome: "Borracharia do João",
     status: "aberto",
-    distancia: "1.2 km",
+    distancia:("1.2 km"),
     telefone: "(64) 99999-0001",
   },
   {
     id: 2,
     nome: "Pneus Silva",
     status: "fechado",
-    distancia: "2.5 km",
+    distancia:("2.5 km"),
     telefone: "(64) 99999-0002",
   },
   {
     id: 3,
     nome: "Borracharia 24h Central",
     status: "aberto",
-    distancia: "3.1 km",
+    distancia:("3.1 km"),
     telefone: "(64) 99999-0003",
   },
 ];
@@ -28,12 +28,17 @@ const borracharias = [
 function MapaConvidado() {
     const [busca, setBusca] = useState("");
     const [somenteAbertas, setSomenteAbertas] = useState(false);
+    const [modoSOS, setModoSOS] = useState(false);
     const borrachariasFiltradas = borracharias.filter((borracharia) =>{
       const combinaComBusca = borracharia.nome.toLowerCase().includes(busca.toLowerCase());
-      const combinaComStatus = somenteAbertas ? borracharia.status === "aberto" : true;
+      const combinaComStatus = (somenteAbertas || modoSOS) ? borracharia.status === "aberto" : true;
       return combinaComBusca && combinaComStatus;
     }
-    );
+  );
+
+    const borrachariasParaExibir = modoSOS 
+      ? [...borrachariasFiltradas].sort((a,b) => parseFloat(a.distancia) - parseFloat(b.distancia))
+      : borrachariasFiltradas;
 
     return (
         <div className="tela-mapa">
@@ -49,14 +54,21 @@ function MapaConvidado() {
         className="campo-busca"
         />
         <button
-        onClick={() => setSomenteAbertas(!somenteAbertas)}
+          onClick={() => setSomenteAbertas(!somenteAbertas)}
         className="botao-filtro"
         >
           {somenteAbertas ? "Mostrando : Abertas" : "Mostrar somente abertas"}
         </button>
 
+        <button
+          onClick={() => setModoSOS(!modoSOS)}
+          className="botao-sos"
+        >
+          {modoSOS ? "Sair do modo SOS" : "🚨 SOS - Emergência"} 
+        </button>
 
-            {borrachariasFiltradas.map((borracharia) =>(
+
+            {borrachariasParaExibir.map((borracharia) =>(
                 <div key={borracharia.id} className="borracharia">
                     <h2>{borracharia.nome}</h2>
                     <p className={`status ${borracharia.status === "aberto" ? "status-aberto" : "status-fechado"}`}>
