@@ -72,3 +72,27 @@
     margin-bottom: 16px;
     box-sizing: border-box;
 }
+
+.botao-filtro{
+    padding: 10px 16px;
+    background-color: white;
+    border: 1px solid #007bff;
+    color:#007bff;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 16px;
+}
+
+.botao-sos {
+    padding: 12px 20px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 16px;
+    margin-right: 8px;
+}
