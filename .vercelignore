@@ -1,0 +1,6 @@
+# Arquivos só para uso local — não vão para o site publicado
+server.js
+*.bat
+*.md
+node_modules
+.env*

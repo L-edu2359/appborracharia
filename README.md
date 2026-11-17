@@ -1,16 +1,27 @@
-# React + Vite
+# Borracharia Já 🛞
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Pneu furou? O app mostra no mapa as borracharias abertas agora, com status (aberta, fechada ou incerta) confirmado por outros motoristas.
 
-Currently, two official plugins are available:
+**App publicado:** https://borracharia-ja-sigma.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Funcionalidades
+- Entrada sem login (convidado) ou com e-mail/senha e Google (Firebase Authentication)
+- Perfis: motorista e borracheiro
+- Mapa com status das borracharias, busca, filtros e botão SOS
+- Detalhes da borracharia: ligar, rota e perfil; favoritos e avaliações
 
-## React Compiler
+## Tecnologias
+HTML, CSS e JavaScript • Google Maps / OpenStreetMap • Firebase Authentication • Node.js (servidor local) • Vercel
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Rodar localmente
+```bash
+node server.js
+```
+Depois abra http://localhost:5500. No Windows, também dá para usar `Abrir Borracharia Ja.bat`.
+Para configurar o login, veja [CONFIGURAR-LOGIN.md](CONFIGURAR-LOGIN.md).
 
-## Expanding the ESLint configuration
+## Estrutura
+- `index.html`, `css/`, `js/` — app atual
+- `prototipo-react/` — primeira versão do projeto (React + Vite)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Projeto acadêmico — Análise e Desenvolvimento de Sistemas, Estácio.
